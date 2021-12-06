@@ -44,7 +44,6 @@ export default {
 }
 
 .container {
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -57,5 +56,17 @@ export default {
 
 .link-light {
   color: #fff;
+}
+.arrow {
+  margin-left: 8px;
+  width: 12px;
+  path {
+    fill: #000;
+  }
+}
+.arrow-light {
+  path {
+    fill: white;
+  }
 }
 </style>
