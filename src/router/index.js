@@ -30,7 +30,7 @@ const routes = [
     name: "Login",
     component: Login,
     meta: {
-      title: "login",
+      title: "Login",
     },
   },
   {
@@ -38,7 +38,7 @@ const routes = [
     name: "Register",
     component: Register,
     meta: {
-      title: "register",
+      title: "Register",
     },
   },
   {
@@ -46,7 +46,7 @@ const routes = [
     name: "PassReset",
     component: PassReset,
     meta: {
-      title: "pass_reset",
+      title: "Reset Password",
     },
   },
 ];
