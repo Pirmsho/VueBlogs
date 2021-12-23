@@ -1,65 +1,83 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import Blogs from "../views/Blogs.vue";
-import Login from "../views/Login.vue";
-import Register from "../views/Register.vue";
-import PassReset from "../views/PassReset.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import Blogs from '../views/Blogs.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
+import PassReset from '../views/PassReset.vue'
+import Profile from '../views/Profile.vue'
+import Admin from '../views/Admin.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home,
     meta: {
-      title: "Home",
+      title: 'Home',
     },
   },
   {
-    path: "/blogs",
-    name: "Blogs",
+    path: '/blogs',
+    name: 'Blogs',
     component: Blogs,
     meta: {
-      title: "Blogs",
+      title: 'Blogs',
     },
   },
   {
-    path: "/login",
-    name: "Login",
+    path: '/login',
+    name: 'Login',
     component: Login,
     meta: {
-      title: "Login",
+      title: 'Login',
     },
   },
   {
-    path: "/register",
-    name: "Register",
+    path: '/register',
+    name: 'Register',
     component: Register,
     meta: {
-      title: "Register",
+      title: 'Register',
     },
   },
   {
-    path: "/passreset",
-    name: "PassReset",
+    path: '/passreset',
+    name: 'PassReset',
     component: PassReset,
     meta: {
-      title: "Reset Password",
+      title: 'Reset Password',
     },
   },
-];
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile,
+    meta: {
+      title: 'Profile',
+    },
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: Admin,
+    meta: {
+      title: 'Admin',
+    },
+  },
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes,
-});
+})
 
 router.beforeEach((to, from, next) => {
-  document.title = `${to.meta.title} | VueBlog`;
-  next();
-});
+  document.title = `${to.meta.title} | VueBlog`
+  next()
+})
 
-export default router;
+export default router
